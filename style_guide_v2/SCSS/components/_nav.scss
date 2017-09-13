@@ -1,0 +1,60 @@
+//===============================
+// Navigation ===================
+//===============================
+
+.nav {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  @extend %nav;
+
+  @include e(item) {
+
+    list-style: none;
+    // margin: auto;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav {
+	margin-top: em(20px);
+	margin-bottom: em(30px);
+
+  @include e(item) {
+    @extend %nav-item-horz;
+    a {
+      @extend %nav-item-link;
+      color: palette(grey);
+      &:hover {
+        @extend %nav-item-on;
+      }
+    }
+
+    @include m(current) {
+      @extend %nav-item-horz;
+      a {
+        @extend %nav-item-link;
+        @extend %nav-item-on;
+      }
+    }
+
+  }
+  	@include mq(medium) {
+  		// margin-top: em(54px);
+  		margin-bottom: 2em;
+      flex-direction: row;
+      padding: 5px;
+  	}
+
+}
+
+// ==============================
+// Navbar =======================
+// ==============================

@@ -1,0 +1,188 @@
+//==================================
+// Placeholders         ============
+//==================================
+
+//Links
+%links
+
+// Images
+%images
+
+
+
+// Navagation Items
+%nav {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+//Input and textarea
+%form-dub {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  &:focus {
+    transition: $trns_duration;
+  }
+}
+
+
+// Helpers
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Screen reader text
+
+.srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// Form Fix
+// .form {
+//   max-width: 50%;
+// }
+
+// Center alignment
+
+%center-align {
+	text-align: center;
+}
+
+// For pseudo-elements
+
+%pseudos {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+// Center elements
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Nav Items
+
+%nav-item-horz {
+  @include mq(medium) {
+    display: inline-block;
+    margin: 0 em(12px);
+  }
+}
+
+%nav-item-link {
+  font-weight: $font-weight--light;
+  text-align: center;
+  font-size: em(18px);
+  display: block;
+  padding: em(8px, 18px);
+  border-bottom: 1px solid transparent;
+  @include mq(small) {
+    // border-bottom-color: palette(grey, xx-light);
+    padding-top: em(14px, 18px);
+    padding-bottom: em(14px, 18px);
+  }
+}
+
+%nav-item-on {
+  color: $white;
+  background-color: $color-teal;
+  border-radius: 5px;
+}
+
+// Headlines
+
+%hdln-prim {
+  color: palette(teal, dark);
+  font-weight: $font-weight--bold;
+  font-size: em(42px);
+  line-height: (46px/42px);
+  margin-top: 0;
+  margin-left: 1em !important;
+
+  @include mq(medium) {
+    font-size: 2.25em;
+  }
+}
+%hdln-sec {
+  // color: palette(grey, light);
+  // letter-spacing: $letter-space;
+  // font-weight: $font-weight--thin;
+  // font-size: em(24px);
+  // font-family: $font-family--secondary;
+  @include mq(medium) {
+    margin-top: 0 !important;
+  }
+}
+
+// Buttons
+
+%btn {
+  padding: 15px 30px;
+  border: 0;
+  border-radius : $br--default;
+  color: $white;
+  text-transform: uppercase;
+  font-size : em(14px);
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+  display: block;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+// Icons
+
+%icn--ui {
+	line-height: 0;
+	cursor: pointer;
+}
+
+
+// Grid Display
+
+.theme {
+
+  @include e(colors) {
+    padding: 15px 30px;
+    margin: .1em 0;
+    border-radius: 5px;
+  }
+}
+
+%flex {
+  display: flex;
+  // justify-content: space-around;
+}

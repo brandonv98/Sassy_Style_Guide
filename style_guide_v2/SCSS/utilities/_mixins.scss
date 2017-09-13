@@ -1,0 +1,84 @@
+//============================
+// Mixins    =================
+//============================
+
+//Element and Modifier BEM Selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+
+}
+
+//Meadia Queries
+
+@mixin mq($media) {
+  @if $media == "small" {
+    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $media == "medium" {
+    @media (min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  }
+  @else if $media == "large" {
+    @media (min-width: $brkpoint-lg + 1) {
+      @content;
+    }
+  }
+  @else {
+    @error "Woops! No value could be retrived for `#{$media}`.";
+  }
+}
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
+
+// Grid Columns
+//
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+    // Generate column modifier classes
+    &--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+// Modifier color classes
+
+@mixin bg-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme}.theme__colors {
+			background-color: $color;
+      text-align: center;
+		}
+	}
+}
+
+// Flexbox Settings
+
+
+// @mixin flex($flex) {
+//   flex : $display, $direction, $space, $center {
+
+//}
+// }

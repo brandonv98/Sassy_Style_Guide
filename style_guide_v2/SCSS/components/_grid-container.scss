@@ -1,0 +1,42 @@
+//=========================================
+//Grid Container ==========================
+//=========================================
+
+//Max width
+//.grid__row,
+.container {
+  @extend %clearfix;
+  @extend .centered;
+  width: 90%;
+
+  // Make Child elements 100%
+  [class*="grid__col--"] > & {
+    width: 100%;
+  }
+//
+//   // Set max-width for grid container
+  @include mq(large) {
+    max-width: $g-cont-max-w;
+  }
+}
+
+//Center Items
+.center {
+  @extend %center-align;
+}
+
+.grid__col {
+    @include bg-colors($grid-colors);
+
+    @include m(12) {
+      @extend %flex;
+      justify-content: space-around;
+    }
+}
+
+.grid__row {
+  margin-top: 2em;
+  @extend %clearfix;
+  @extend %flex;
+  justify-content: center;
+}

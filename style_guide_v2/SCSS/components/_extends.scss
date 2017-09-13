@@ -1,0 +1,45 @@
+// Headlines
+.headline {
+   @include m(primary) {
+    @extend %hdln-prim;
+  }
+  @include m(secondary) {
+    color: palette(grey, x-light);
+  	text-transform: uppercase;
+  	letter-spacing: $letter-space;
+  	font-weight: $font-weight--medium;
+  	font-size: em(14px);
+  	@extend %hdln-sec;
+  }
+}
+
+// Context
+.blockquote {
+  margin: em(32px, 24px) 10px;
+  padding: 0 0 0 5%;
+  border-left: em(8px, 24px) solid palette(teal, light);
+  font-size: em(24px);
+  font-weight: $font-weight--light;
+  font-style : italic;
+}
+
+.link {
+  color: $lightblue;
+  text-decoration: none;
+  font-weight: $font-weight--medium;
+}
+
+.card p {
+  margin: 0 0 em(30px, 18px);
+	font-weight: $font-weight--light;
+	font-size: em(18px);
+	line-height: (27px/18px);
+}
+
+// Body
+.container {
+  color: palette(grey);
+  font-size: $base__font-size;
+  font-family: $font-family--primary;
+  line-height: ($base__line/$base__font-size);
+}
