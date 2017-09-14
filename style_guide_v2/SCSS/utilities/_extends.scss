@@ -1,7 +1,6 @@
 //==================================
-// Placeholders         ============
+// Placeholders ====================
 //==================================
-
 //Input and textarea
 %form-dub {
   display: block;
@@ -9,16 +8,13 @@
   width: 100%;
   outline: 0;
   border: 0;
+
   &:focus {
     transition: $trns_duration;
   }
 }
-
-
 // Helpers
-
 // Clearfix
-
 %clearfix {
   &:after {
     content: "";
@@ -26,44 +22,34 @@
     clear: both;
   }
 }
-
 // Screen reader text
-
 .srt {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
-
 // Center alignment
-
 %center-align {
-	text-align: center;
+  text-align: center;
 }
-
 // For pseudo-elements
-
 %pseudos {
   display: block;
   content: '';
   position: absolute;
 }
-
 // Center elements
-
 .centered {
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 // Images
-
 %img-class {
   border: 1px solid palette(grey, x-light);
   padding: em(12px);
@@ -74,17 +60,13 @@
   max-width: 100%;
   height: auto;
 }
-
 //Links
-
 %link {
   color: $lightblue;
   text-decoration: none;
   font-weight: $font-weight--medium;
 }
-
 // Nav Items
-
 %nav-item-horz {
   @include mq(medium) {
     display: inline-block;
@@ -110,62 +92,54 @@
   background-color: $color-teal;
   border-radius: 5px;
 }
-
 // Headlines
-
 %hdln-prim {
   color: palette(teal, dark);
   font-weight: $font-weight--bold;
   font-size: em(42px);
   line-height: (46px/42px);
-  margin-top: 0;
+  margin-top: 0 !important;
   margin-left: 1em !important;
-
   @include mq(medium) {
     font-size: 2.25em;
   }
 }
+
 %hdln-sec {
   @include mq(medium) {
     margin-top: 0 !important;
   }
 }
-
 // Buttons
-
 %btn {
   padding: 15px 30px;
   border: 0;
-  border-radius : $br--default;
+  border-radius: $br--default;
   color: $white;
   text-transform: uppercase;
-  font-size : em(14px);
+  font-size: em(14px);
   font-weight: $font-weight--medium;
   transition: opacity $trns-duration;
   display: block;
+
   &:hover {
-    opacity: .75;
+    opacity: 0.75;
   }
+
   &:active {
     opacity: initial;
   }
 }
-
 // Icons
-
 %icn--ui {
-	line-height: 0;
-	cursor: pointer;
+  line-height: 0;
+  cursor: pointer;
 }
-
-
 // Grid Theme Display
-
 .theme {
-
   @include e(colors) {
     padding: 15px 30px;
-    margin: .1em 0;
+    margin: 0.1em 0;
     border-radius: 5px;
   }
 }
