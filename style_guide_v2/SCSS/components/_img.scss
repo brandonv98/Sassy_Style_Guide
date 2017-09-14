@@ -4,8 +4,7 @@
 
 .img {
   @include m(wrap) {
-    border: 1px solid palette(grey, x-light);
-    padding: em(12px);
+    @extend %img-class;
   }
   @include m(avatar) {
     display: block;
@@ -23,7 +22,7 @@
 
 // Framed Image
 .img--frame {
-  padding: .8em;
+  padding: 1.2em;
   border: 1px solid palette(grey, x-light);
-  text-align: center;
+  width: 100%;
 }

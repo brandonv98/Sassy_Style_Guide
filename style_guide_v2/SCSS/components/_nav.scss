@@ -3,29 +3,21 @@
 //===============================
 
 .nav {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  @extend %nav;
+  margin-top: em(20px);
+  margin-bottom: em(30px);
+
+  @include flexbox();
+  @include just-con(center);
+  @include flex-dir(column);
 
   @include e(item) {
 
     list-style: none;
-    // margin: auto;
     a {
       color: inherit;
       text-decoration: none;
     }
   }
-}
-
-// ==========================================================================
-// Nav
-// ==========================================================================
-
-.nav {
-	margin-top: em(20px);
-	margin-bottom: em(30px);
 
   @include e(item) {
     @extend %nav-item-horz;
@@ -47,14 +39,9 @@
 
   }
   	@include mq(medium) {
-  		// margin-top: em(54px);
   		margin-bottom: 2em;
-      flex-direction: row;
+      @include flex-dir(row);
       padding: 5px;
   	}
 
 }
-
-// ==============================
-// Navbar =======================
-// ==============================

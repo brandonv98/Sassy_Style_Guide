@@ -13,7 +13,7 @@
   [class*="grid__col--"] > & {
     width: 100%;
   }
-//
+
 //   // Set max-width for grid container
   @include mq(large) {
     max-width: $g-cont-max-w;
@@ -29,14 +29,16 @@
     @include bg-colors($grid-colors);
 
     @include m(12) {
-      @extend %flex;
-      justify-content: space-around;
+      @include flexbox();
+      @include flex-dir(space-around);
     }
 }
 
 .grid__row {
   margin-top: 2em;
   @extend %clearfix;
-  @extend %flex;
-  justify-content: center;
+  @include mq(medium) {
+    @include flexbox();
+    @include just-con(center);
+  }
 }

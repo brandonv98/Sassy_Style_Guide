@@ -100,16 +100,10 @@
   order: $val;
 }
 
-.wrapper {
-  @include flexbox();
+@mixin just-con($con) {
+  justify-content: $con;
 }
 
-.item {
-  @include flex(1 200px);
-  @include order(2);
-  background: pink;
-  height:150px;
-  margin:10px;
-  padding:25px;
-  text-align: center;
+@mixin flex-dir($direction) {
+  flex-direction: $direction;
 }

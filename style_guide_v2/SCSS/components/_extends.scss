@@ -22,11 +22,9 @@
   font-weight: $font-weight--light;
   font-style : italic;
 }
-
+// links
 .link {
-  color: $lightblue;
-  text-decoration: none;
-  font-weight: $font-weight--medium;
+  @extend %link;
 }
 
 .card p {

@@ -2,21 +2,6 @@
 // Placeholders         ============
 //==================================
 
-//Links
-%links
-
-// Images
-%images
-
-
-
-// Navagation Items
-%nav {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-}
-
 //Input and textarea
 %form-dub {
   display: block;
@@ -55,11 +40,6 @@
 	width: 1px;
 }
 
-// Form Fix
-// .form {
-//   max-width: 50%;
-// }
-
 // Center alignment
 
 %center-align {
@@ -82,12 +62,26 @@
 	margin-right: auto;
 }
 
+// Images
 
+%img-class {
+  border: 1px solid palette(grey, x-light);
+  padding: em(12px);
+}
 
+%img {
+  margin-bottom: em(24px);
+  max-width: 100%;
+  height: auto;
+}
 
-// ==========================================================================
-// Placeholders
-// ==========================================================================
+//Links
+
+%link {
+  color: $lightblue;
+  text-decoration: none;
+  font-weight: $font-weight--medium;
+}
 
 // Nav Items
 
@@ -106,7 +100,6 @@
   padding: em(8px, 18px);
   border-bottom: 1px solid transparent;
   @include mq(small) {
-    // border-bottom-color: palette(grey, xx-light);
     padding-top: em(14px, 18px);
     padding-bottom: em(14px, 18px);
   }
@@ -133,11 +126,6 @@
   }
 }
 %hdln-sec {
-  // color: palette(grey, light);
-  // letter-spacing: $letter-space;
-  // font-weight: $font-weight--thin;
-  // font-size: em(24px);
-  // font-family: $font-family--secondary;
   @include mq(medium) {
     margin-top: 0 !important;
   }
@@ -171,7 +159,7 @@
 }
 
 
-// Grid Display
+// Grid Theme Display
 
 .theme {
 
@@ -180,9 +168,4 @@
     margin: .1em 0;
     border-radius: 5px;
   }
-}
-
-%flex {
-  display: flex;
-  // justify-content: space-around;
 }
